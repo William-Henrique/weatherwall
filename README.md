@@ -1,7 +1,7 @@
 weatherwall
 ===========
 
-Ruby Script to update wallpaper based on weather
+Ruby Script to update mac wallpaper based on weather
 
 Instructions
 ------------
