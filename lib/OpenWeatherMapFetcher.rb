@@ -6,13 +6,13 @@ module WeatherWall
     DATAMODE="json"
     DAYCNT="1"
     UNITS="metric"
-    
+    APIENDPOINT="http://api.openweathermap.org/data/2.5/forecast/daily"
     @lat
     @long
     @currentStats
     
-    def initialize(api_endpoint,lat,long)
-      @fetcher = APIFetcher.new(api_endpoint)
+    def initialize(lat,long)
+      @fetcher = APIFetcher.new(APIENDPOINT)
       @lat = lat
       @long = long
       @currentStats = Hash.new
