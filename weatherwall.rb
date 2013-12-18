@@ -7,7 +7,7 @@ module WeatherWall
     BASEPATH = File.join(File.dirname(__FILE__))  
     props = PropertyLoader.new( File.join(BASEPATH,"weather.properties") )
 
-    params = props.getProperty(:apiurl),props.getProperty(:lat),props.getProperty(:lon)
+    params = props.getProperty(:lat),props.getProperty(:lon)
     fetcher = OpenWeatherMapFetcher.new(*params)
     iconfile =  fetcher.fetchCurrentStats().getProperty(:weather)["icon"]
     IMGBASEPATH = props.getProperty(:imagesdir)
